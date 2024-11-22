@@ -1,4 +1,14 @@
 import { FaCreditCard, FaLink, FaShoppingCart } from 'react-icons/fa';
+import {
+  FaEye,
+  FaCalendarAlt,
+  FaFileAlt,
+  FaCogs,
+  FaList,
+  FaShieldAlt,
+  FaBalanceScale,
+} from 'react-icons/fa';
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -42,7 +52,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className='flex items-center justify-between px-6 py-16 bg-gray-50'>
+      <section className='flex items-center justify-between px-36 py-16 bg-gray-50'>
         <div className='max-w-lg'>
           <img src='/klu-tpv.png' alt='KluTPV Logo' className='h-28' />
           <h2 className='text-2xl text-gray-700'>
@@ -52,19 +62,26 @@ export default function Home() {
             Sé parte de los beneficios que trae consigo la innovación.
           </p>
         </div>
-        <img src='/card-image.png' alt='Tarjetas' className='w-96' />
+        <img src='/card-image.png' alt='Tarjetas' className='w-1/2' />
       </section>
 
       {/* Sobre Nosotros */}
-      <section id='about' className='bg-blue-900 text-white px-6 py-16'>
-        <div className='container mx-auto'>
-          <h2 className='text-3xl font-bold mb-4'>Sobre nosotros</h2>
-          <p className='text-lg leading-relaxed'>
-            En Klu, impulsamos la transformación financiera de los negocios con
-            soluciones innovadoras, accesibles y seguras. Ofrecemos herramientas
-            adaptadas a las necesidades de cada empresa...
-          </p>
-        </div>
+      <section
+        id='about'
+        className='text-white px-32 flex-col h-80 text-center justify-center items-center content-center'
+        style={{
+          backgroundColor: '#203D5C',
+        }}
+      >
+        <h2 className='text-3xl font-bold mb-4'>Sobre nosotros</h2>
+        <p className='text-lg'>
+          En Klu, impulsamos la transformación financiera de los negocios con
+          soluciones innovadoras, accesibles y seguras. Ofrecemos herramientas
+          adaptadas a las necesidades de cada empresa, como terminales de pago
+          avanzadas, integraciones de e-commerce y servicios digitales, todo con
+          un enfoque en transparencia, eficiencia y tecnología. Somos el aliado
+          que ayuda a tu negocio a crecer en un mundo digital.
+        </p>
       </section>
       {/* Productos */}
       <section id='products' className='py-16 bg-white'>
@@ -211,35 +228,112 @@ export default function Home() {
       </section>
 
       {/* Beneficios */}
-      <section id='benefits' className='px-6 py-16 bg-white'>
-        <div className='container mx-auto'>
-          <h2 className='text-3xl font-bold mb-8'>Beneficios</h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='text-gray-700'>
-              Monitoreo transaccional en tiempo real.
+      <section
+        className=' py-12'
+        style={{
+          backgroundColor: '#F9FAFB',
+        }}
+      >
+        <div className='max-w-7xl mx-auto px-4 text-center'>
+          {/* Título y subtítulo */}
+          <h2 className='text-2xl font-semibold text-gray-800 md:text-3xl'>
+            Beneficios
+          </h2>
+          <p className='mt-2 text-lg text-gray-600'>
+            Enfocados a la flexibilidad del cliente
+          </p>
+
+          {/* Beneficios (Grid) */}
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-20'>
+            {/* Beneficio 1 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaEye className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Monitoreo transaccional en tiempo real
+              </h3>
             </div>
-            <div className='text-gray-700'>
-              Visualización y soporte en dispositivos asignados al comercio.
+
+            {/* Beneficio 2 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaCogs className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Visualización y soporte en dispositivos asignados al comercio
+              </h3>
             </div>
-            <div className='text-gray-700'>
-              Información de volúmenes diarios, semanales y mensuales.
+
+            {/* Beneficio 3 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaCalendarAlt className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Información de volúmenes diarios, semanales y mensuales
+              </h3>
             </div>
-            <div className='text-gray-700'>
-              Extracción rápida de transacciones.
+
+            {/* Beneficio 4 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaFileAlt className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Extracción rápida de transacciones
+              </h3>
             </div>
-            <div className='text-gray-700'>
-              Personalización total: Ajusta comisiones según el tipo de
-              transacción.
+
+            {/* Beneficio 5 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaList className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Personalización total
+              </h3>
+              <p className='text-gray-600 text-sm mt-2'>
+                Ajusta comisiones según el tipo y volumen de transacción
+              </p>
             </div>
-            <div className='text-gray-700'>
-              Garantiza la seguridad: Cumplimos normativas de seguridad.
+
+            {/* Beneficio 6 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaBalanceScale className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Transparencia total
+              </h3>
+              <p className='text-gray-600 text-sm mt-2'>
+                Detalles claros sobre cada componente de las comisiones
+              </p>
+            </div>
+
+            {/* Beneficio 7 */}
+            <div className='flex flex-col items-center text-center'>
+              <div className='w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full'>
+                <FaShieldAlt className='w-6 h-6 text-gray-600' />
+              </div>
+              <h3 className='mt-4 text-lg font-medium text-gray-800'>
+                Garantiza la seguridad
+              </h3>
+              <p className='text-gray-600 text-sm mt-2'>
+                Cumplimos con las normativas y estándares de seguridad
+              </p>
             </div>
           </div>
         </div>
       </section>
-
       {/* Contacto */}
-      <section id='contact' className='px-6 py-16 bg-blue-900 text-white'>
+      <section
+        id='contact'
+        className='px-6 py-16 text-black'
+        style={{
+          backgroundColor: '#FBFBFB',
+        }}
+      >
         <div className='container mx-auto text-center'>
           <h2 className='text-2xl font-bold mb-4'>Contáctanos</h2>
           <p>
@@ -252,7 +346,12 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className='bg-gray-800 text-white px-6 py-4'>
+      <footer
+        className=' text-black px-6 py-4'
+        style={{
+          backgroundColor: '#FBFBFB',
+        }}
+      >
         <div className='container mx-auto text-center'>
           <p>&copy; 2024 KluTPV. Todos los derechos reservados.</p>
         </div>
