@@ -327,8 +327,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* contacto */}
+      <section className='bg-gray-50 py-8' id='contact'>
+        <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-gray-200 shadow-lg rounded-lg overflow-hidden'>
+          {/* Imagen */}
+          <div className='w-full md:w-1/2 bg-gray-200 flex justify-center items-center'>
+            <Image
+              src='/device.png'
+              alt='Device'
+              width={300}
+              height={300}
+              className='object-contain'
+              objectFit='contain'
+            />
+          </div>
+
+          {/* Contenido */}
+          <div className='w-full md:w-1/2 p-6 md:p-8 bg-white'>
+            <h2 className='text-2xl font-semibold text-gray-800'>
+              Contáctanos
+            </h2>
+            <p className='mt-4 text-gray-600'>
+              Escríbenos un correo contándonos tus necesidades a:
+            </p>
+            <p className='mt-2 font-medium' style={{ color: '#203D5C' }}>
+              soporte@klutpv.com
+            </p>
+            <a
+              href='mailto:soporte@klutpv.com'
+              style={{ backgroundColor: '#203D5C' }}
+              className='inline-block mt-6 px-6 py-3 text-white font-medium text-sm rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            >
+              Enviar correo
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
-      <footer id='contact' className='bg-gray-50 py-6 pt-28'>
+      <footer className='bg-gray-50 py-6 pt-28'>
         <div className='max-w-7xl mx-auto px-4'>
           {/* Logo y enlaces */}
           <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left mb-20'>
