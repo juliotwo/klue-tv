@@ -326,34 +326,54 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Contacto */}
-      <section
-        id='contact'
-        className='px-6 py-16 text-black'
-        style={{
-          backgroundColor: '#FBFBFB',
-        }}
-      >
-        <div className='container mx-auto text-center'>
-          <h2 className='text-2xl font-bold mb-4'>Contáctanos</h2>
-          <p>
-            Escríbenos un correo a{' '}
-            <a href='mailto:soporte@klutpv.com' className='underline'>
-              soporte@klutpv.com
-            </a>
-          </p>
-        </div>
-      </section>
 
       {/* Footer */}
-      <footer
-        className=' text-black px-6 py-4'
-        style={{
-          backgroundColor: '#FBFBFB',
-        }}
-      >
-        <div className='container mx-auto text-center'>
-          <p>&copy; 2024 KluTPV. Todos los derechos reservados.</p>
+      <footer id='contact' className='bg-gray-50 py-6 pt-28'>
+        <div className='max-w-7xl mx-auto px-4'>
+          {/* Logo y enlaces */}
+          <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left mb-20'>
+            {/* Logo */}
+            <div className='flex justify-center md:justify-start'>
+              <img src='/klu-tpv.png' alt='KluTPV Logo' className='h-8' />
+            </div>
+
+            {/* Enlaces */}
+            <div className='mt-4 md:mt-0 flex flex-col md:flex-row items-center gap-6'>
+              <a
+                href='#'
+                className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+              >
+                Aviso de privacidad
+              </a>
+              <a
+                href='#'
+                className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+              >
+                Términos y condiciones
+              </a>
+            </div>
+          </div>
+          <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left'>
+            <p className='text-sm text-gray-600'>
+              Klutpv® 2024. Todos los derechos reservados.
+            </p>
+            <a
+              href='mailto:soporte@klutpv.com'
+              className='text-sm text-gray-600 hover:text-gray-800 mt-4 md:mt-0'
+            >
+              soporte@klutpv.com
+            </a>
+          </div>
+          {/* Línea divisoria */}
+          <div className='my-6 border-t border-gray-200'></div>
+
+          {/* Información de contacto */}
+          <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left'>
+            <p className='text-sm text-gray-600 mt-4 md:mt-0'>
+              Sierra Gorda 42, Lomas de Chapultepec, Miguel Hidalgo, 11000
+              Ciudad de México, CDMX
+            </p>
+          </div>
         </div>
       </footer>
     </main>
