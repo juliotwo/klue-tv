@@ -2,7 +2,7 @@ import { fontMontserrat, fontUrbanist } from '../fonts';
 import '../styles/globals.css';
 
 export const metadata = {
-  title: "CapaPay",
+  title: 'KluTpv',
   description: "It's a card services company page",
 };
 
