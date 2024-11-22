@@ -328,8 +328,8 @@ export default function Home() {
       </section>
 
       {/* contacto */}
-      <section className='bg-gray-50 py-8' id='contact'>
-        <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-gray-200 shadow-lg rounded-lg overflow-hidden'>
+      <section className='my-20 py-8' id='contact'>
+        <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center bg-gray-200 shadow-lg rounded-lg overflow-hidden border-gray-200 border '>
           {/* Imagen */}
           <div className='w-full md:w-1/2 bg-gray-200 flex justify-center items-center'>
             <Image
@@ -362,7 +362,32 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className='flex justify-center mt-36 gap-36'>
+          <Image
+            src='/cnbv.png'
+            objectFit='contain'
+            className='object-contain'
+            alt='KluTPV Logo'
+            width={120}
+            height={100}
+          />
+          <Image
+            src='/prosa.png'
+            className='object-contain'
+            alt='KluTPV Logo'
+            width={120}
+            height={100}
+          />
+          <Image
+            src='/pci.png'
+            className='object-contain'
+            alt='KluTPV Logo'
+            width={120}
+            height={100}
+          />
+        </div>
       </section>
+
       {/* Footer */}
       <footer className='bg-gray-50 py-6 pt-28'>
         <div className='max-w-7xl mx-auto px-4'>
