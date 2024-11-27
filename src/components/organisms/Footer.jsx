@@ -1,87 +1,76 @@
-import map from 'lodash.map';
-import Link from 'next/link';
-import Image from 'next/image';
-import Container from '../atoms/Container';
-import { footerData, contactData } from '@/data';
-
 const Footer = () => {
   return (
-    <>
-      <div className='bg-white pt-10 pb-20 border-t border-gray-300'>
-        <Container className='flex flex-col'>
-          <Image src='/images/logo.png' alt='Logo' width={200} height={200} />
-          <p className='text-sm font-light'>
-            Tintoreto 92, Oficina 201, Col. Ciudad de los Deportes, Del. Benito
-            Juárez, C.P. 03710, Ciudad de México, CDMX.
-          </p>
+    <footer className='bg-gray-50 py-6 pt-28'>
+      <div className='max-w-7xl mx-auto px-4'>
+        {/* Logo y enlaces */}
+        <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left mb-20'>
+          {/* Logo */}
+          <div className='flex justify-center md:justify-start'>
+            <img src='/klu-tpv.png' alt='KluTPV Logo' className='h-8' />
+          </div>
 
-          <div className='mt-4'>
-            {map(contactData, (item) => (
-              <Link
-                href={item.href}
-                key={item.href}
-                target='_blank'
-                rel='nopener noreferrer'
-                className='text-xs font-medium flex items-center gap-3'
-              >
-                <span className='text-secondary text-sm'>{item.Icon}</span>{' '}
-                {item.title}
-              </Link>
-            ))}
+          {/* Enlaces */}
+          <div className='mt-4 md:mt-0 flex flex-col md:flex-row items-center gap-6'>
+            <a
+              href='#'
+              className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+            >
+              Aviso de privacidad
+            </a>
+            <a
+              href='#'
+              className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+            >
+              Términos y condiciones
+            </a>
           </div>
-          <div className='flex items-center justify-between w-full mt-4'>
-            <div className='flex gap-5 items-center'>
-              <Link
-                target="_blank"
-                href="https://www.facebook.com/cerrajeriamarijooficial?mibextid=LQQJ4d"
-                >
-              
-              <Image
-                alt='Facebook'
-                //onClick={() => window.open(`https://www.facebook.com/cerrajeriamarijooficial?mibextid=LQQJ4d`)}
-                width={40}
-                height={40}
-                className='cursor-pointer'
-                src={'/images/facebook.png'}
-              />
-                </Link>
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/capapay_?igsh=NHcwOHdmeG9jM3Yz&utm_source=qr"
-                >
-              <Image
-                //onClick={() => window.open(`https://www.instagram.com/capapay_?igsh=NHcwOHdmeG9jM3Yz&utm_source=qr`)}
-                alt='Instagram'
-                width={40}
-                height={40}
-                className='cursor-pointer'
-                src={'/images/instagram.png'}
-              />
-                </Link>
-            </div>
-          </div>
-        </Container>
-      </div>
-      <div className='bg-black py-10 lg:py-6 text-white'>
-        <Container className='flex flex-col lg:flex-row justify-between items-center'>
-          <p className='text-sm font-light'>
-            Copyright © CapaPay 2023 | Todos los Derechos Reservados
+        </div>
+        <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left'>
+          <p className='text-sm text-gray-600'>
+            Klutpv® 2024. Todos los derechos reservados.
           </p>
+          <a
+            href='mailto:soporte@klutpv.com'
+            className='text-sm text-gray-600 hover:text-gray-800 mt-4 md:mt-0'
+          >
+            soporte@klutpv.com
+          </a>
+        </div>
+        {/* Línea divisoria */}
+        <div className='my-6 border-t border-gray-200'></div>
 
-          <div className='flex items-center gap-4 mt-5 lg:mt-0'>
-            {map(footerData, (item) => (
-              <Link
-                href={item.href}
-                key={item.href}
-                className='text-xs font-medium flex items-center gap-3'
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-        </Container>
+        {/* Información de contacto */}
+        <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left'>
+          <p className='text-sm text-gray-600 mt-4 md:mt-0'>
+            Sierra Gorda 42, Lomas de Chapultepec, Miguel Hidalgo, 11000 Ciudad
+            de México, CDMX
+          </p>
+        </div>
+
+        {/* Links de aviso de privacidad y términos y condiciones y coockies */}
+        <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left mt-20'>
+          <a
+            href='/privacidad'
+            className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+          >
+            Aviso de privacidad
+          </a>
+          <a
+            href='/terminos'
+            className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+          >
+            Términos y condiciones
+          </a>
+          <a
+            href='/cookies'
+            className='text-gray-600 hover:text-gray-800
+          text-sm font-medium'
+          >
+            Aviso de Cookies
+          </a>
+        </div>
       </div>
-    </>
+    </footer>
   );
 };
 

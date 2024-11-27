@@ -28,72 +28,48 @@ const dataHeroNav = [
   {
     href: '/#contact',
     title: 'Contacto',
-  }
-]
+  },
+];
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <>
-      <nav className="w-full bg-primary">
-        <Container className="flex justify-between h-14 sm:h-10 items-center">
-          <div className="flex flex-row w-full xl:w-auto items-center justify-between sm:justify-start gap-8 text-xs">
-            <Link href='/' className="text-white flex gap-2 items-center justify-center font-medium">
-              <FaHome className='text-xl text-secondary' /> Principal
-            </Link>
-
-            <div className='flex flex-col sm:flex-row sm:items-center sm:gap-8'>
-              {map(contactData, (item) => (
-                <Link
-                  href={item.href}
-                  key={item.href}
-                  target='_blank'
-                  rel='nopener noreferrer'
-                  className='text-white text-xs flex items-center gap-2'
-                >
-                  <span className='text-secondary text-lg'>{item.Icon}</span> {item.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className='items-center justify-center gap-8 text-sm hidden xl:flex'>
-            {map(contactData, (item) => (
-              <Link
-                href={item.href}
-                key={item.href}
-                target='_blank'
-                rel='nopener noreferrer'
-                className='text-white text-xs flex items-center gap-2'
-              >
-                <span className='text-secondary text-lg'>{item.Icon}</span> {item.title}
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </nav>
-      {pathname === '/' && (
-        <div className='bg-white h-40 border-b-4 border-secondary'>
-          <Container className='h-full w-full flex flex-row items-center justify-between'>
-            <Image src='/images/logo.png' alt='Logo' width={300} height={300} />
-
-
-            <div className='flex-row items-center gap-8 text-sm xl:text-base hidden lg:flex'>
-              {map(dataHeroNav, (item) => (
-                <Link
-                  href={item.href}
-                  key={item.href}
-                  className={`${pathname === item.href ? 'text-secondary' : 'text-primary'} hover:text-secondary`}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          </Container>
-        </div>
-      )}
-    </>
+    <header className='bg-white shadow-md'>
+      <div className='container mx-auto flex justify-between items-center py-4 px-6'>
+        {/* Logo */}
+        <img src='/klu-tpv.png' alt='KluTPV Logo' className='h-8' />
+        <nav>
+          <ul className='flex space-x-6 text-gray-600'>
+            <li>
+              <a href='/#about' className='hover:text-black'>
+                Sobre nosotros
+              </a>
+            </li>
+            <li>
+              <a href='/#products' className='hover:text-black'>
+                Productos
+              </a>
+            </li>
+            <li>
+              <a href='/#features' className='hover:text-black'>
+                Características
+              </a>
+            </li>
+            <li>
+              <a href='/#benefits' className='hover:text-black'>
+                Beneficios
+              </a>
+            </li>
+            <li>
+              <a href='/#contact' className='hover:text-black'>
+                Contáctanos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 
