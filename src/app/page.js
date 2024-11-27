@@ -435,6 +435,29 @@ export default function Home() {
               Ciudad de México, CDMX
             </p>
           </div>
+
+          {/* Links de aviso de privacidad y términos y condiciones y coockies */}
+          <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left'>
+            <a
+              href='/privacidad'
+              className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+            >
+              Aviso de privacidad
+            </a>
+            <a
+              href='/terminos'
+              className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+            >
+              Términos y condiciones
+            </a>
+            <a
+              href='/cookies'
+              className='text-gray-600 hover:text-gray-800
+              text-sm font-medium'
+            >
+              Aviso de Cookies
+            </a>
+          </div>
         </div>
       </footer>
     </main>
