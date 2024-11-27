@@ -9,10 +9,9 @@ export default function Policy() {
       <Navbar />
 
       <Container className='my-20 md:my-24 flex flex-col items-center gap-3'>
-        <Label>Aviso de Privacidad</Label>
+        <Label>Aviso de Cookies</Label>
 
         <div className='mt-10 flex flex-col gap-4 text-primary'>
-          <h1>Aviso de Cookies</h1>
           <p>
             <strong>Fecha de actualización:</strong> noviembre 2024
           </p>

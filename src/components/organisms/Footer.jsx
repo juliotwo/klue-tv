@@ -12,16 +12,22 @@ const Footer = () => {
           {/* Enlaces */}
           <div className='mt-4 md:mt-0 flex flex-col md:flex-row items-center gap-6'>
             <a
-              href='#'
+              href='/privacidad'
               className='text-gray-600 hover:text-gray-800 text-sm font-medium'
             >
               Aviso de privacidad
             </a>
             <a
-              href='#'
+              href='/terminos'
               className='text-gray-600 hover:text-gray-800 text-sm font-medium'
             >
               Términos y condiciones
+            </a>
+            <a
+              href='/cookies'
+              className='text-gray-600 hover:text-gray-800 text-sm font-medium'
+            >
+              Aviso de cookies
             </a>
           </div>
         </div>
@@ -45,29 +51,6 @@ const Footer = () => {
             Sierra Gorda 42, Lomas de Chapultepec, Miguel Hidalgo, 11000 Ciudad
             de México, CDMX
           </p>
-        </div>
-
-        {/* Links de aviso de privacidad y términos y condiciones y coockies */}
-        <div className='flex flex-col md:flex-row md:items-center justify-between text-center md:text-left mt-20'>
-          <a
-            href='/privacidad'
-            className='text-gray-600 hover:text-gray-800 text-sm font-medium'
-          >
-            Aviso de privacidad
-          </a>
-          <a
-            href='/terminos'
-            className='text-gray-600 hover:text-gray-800 text-sm font-medium'
-          >
-            Términos y condiciones
-          </a>
-          <a
-            href='/cookies'
-            className='text-gray-600 hover:text-gray-800
-          text-sm font-medium'
-          >
-            Aviso de Cookies
-          </a>
         </div>
       </div>
     </footer>
