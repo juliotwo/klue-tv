@@ -379,13 +379,6 @@ export default function Home() {
             width={120}
             height={100}
           />
-          <Image
-            src='/pci.png'
-            className='object-contain'
-            alt='KluTPV Logo'
-            width={120}
-            height={100}
-          />
         </div>
       </section>
 
